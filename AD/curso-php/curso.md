@@ -1,0 +1,1 @@
+    http://localhost/AD/curso-php/index2.php Esto es un ejemplo de como ejecutar el PHP en la pagina web
