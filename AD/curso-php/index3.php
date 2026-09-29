@@ -67,7 +67,5 @@ calcular (3,4, "-", $res);
     echo "<br>";
     calcular (3,4, "/", $res);
     echo "el resultado es  $res";
-   
-
 
 ?>
