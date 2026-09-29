@@ -18,8 +18,11 @@ echo calcularNumeroMayor(60, 50);
 echo "<br>";
 
 //dados tres numeros suelte el mayor
+
+//si son iguales alguno que saque un -1
 function llamadaNumeroMayor3 ($num1, $num2, $num3){
-    if($num1>$num2 && $num1 > $num3) return $num1; 
+if($num1==$num2 && $num1 == $num3 &&  $num2 == $num1 && $num2 == $num3 && $num3 == $num1 && $num3==$num2 ) return -1;
+   else if($num1>$num2 && $num1 > $num3) return $num1; 
     else if ($num2> $num1 && $num2 > $num3) return $num2;
     else return  $num3;
 }
