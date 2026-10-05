@@ -51,8 +51,9 @@ $resultado = $a-$b;
     } else if ($operador ===  "*"){
         $resultado = $a*$b;
 
-    }else if ($operador ===" /"){
-        $resultado = $a/$b;
+    }else if ($operador === "/"){
+        if ($b === 0) $resultado = "No se puede dividir por 0";
+        else $resultado = $a/$b;
     }
     
 }
@@ -66,6 +67,9 @@ calcular (3,4, "-", $res);
     echo "el resultado es  $res";
     echo "<br>";
     calcular (3,4, "/", $res);
+    echo "el resultado es  $res";
+    echo "<br>";
+    calcular (3,0, "/", $res);
     echo "el resultado es  $res";
 
 ?>

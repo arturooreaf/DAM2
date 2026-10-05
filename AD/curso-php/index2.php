@@ -21,7 +21,7 @@ echo "<br>";
 
 //si son iguales alguno que saque un -1
 function llamadaNumeroMayor3 ($num1, $num2, $num3){
-if($num1==$num2 && $num1 == $num3 &&  $num2 == $num1 && $num2 == $num3 && $num3 == $num1 && $num3==$num2 ) return -1;
+if($num1 == $num2 || $num1 == $num3 || $num2 == $num3) return -1;
    else if($num1>$num2 && $num1 > $num3) return $num1; 
     else if ($num2> $num1 && $num2 > $num3) return $num2;
     else return  $num3;
@@ -45,16 +45,16 @@ echo llamadaNumeroMayor3(3, 2, 1); //test 1  //3
 echo "<br>";
 
 echo "test5:  ";
-echo llamadaNumeroMayor3(1, 1,2); //test2  //2
+echo llamadaNumeroMayor3(1, 1,2); //test2  //-1
 echo "<br>";
 
 
 echo "test6:  ";
-echo llamadaNumeroMayor3(2, 1, 1);  //test2  //2
+echo llamadaNumeroMayor3(2, 1, 1);  //test2  //-1
 echo "<br>";
 
 echo "test7:  ";
-echo llamadaNumeroMayor3(1, 1, 1);  //test2 //1
+echo llamadaNumeroMayor3(1, 1, 1);  //test2 //-1
 echo "<br>";
 
 

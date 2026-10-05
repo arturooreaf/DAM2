@@ -65,7 +65,7 @@ echo 'el valor de edad es $edad ';
 echo "el valor de la edad es $edad";
 
 
-define('PI',3,141592)
+define('PI',3.141592)
     ?>
   </h1>
 </body>
