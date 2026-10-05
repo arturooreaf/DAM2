@@ -64,4 +64,41 @@ console.log(suma + " suma");
 
 
 const multiplicacion = numeros.reduce((c,a) => c*a, 1);
-console.log(multiplicacion + " multiplicacion") 
+console.log(multiplicacion + " multiplicacion");
+
+
+/****
+ * 
+ * Esto es para el reduce .max
+ * [1,23,12,6]
+ * c = -1
+ * 1
+ * c= 1
+ * 23
+ * c=23
+ * 12 
+ * c = 23
+ * 6 
+ * c= 23
+ */
+const numeros1 = [1,3,4,5,20,4,140,3,5];
+
+function miMax(acumulado, actual) 
+{
+    /****
+     * 
+     * if(acumulado > actual)
+        return acumulado;
+    else 
+        return actual;
+     *     |
+           |
+           es esto de abajo 
+     * 
+     */
+    
+          
+return  acumulado > actual ? acumulado : actual
+}
+
+console.log(numeros1.reduce(miMax)); 
