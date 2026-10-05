@@ -42,3 +42,26 @@ console.log(primerNumeroMayorQueDos)
 //el find para encontrar el primer valor en este caso 
 const marcaMayorCaracteresMayor4 = marcas_coches.find(n => n.substring(4));
 console.log(marcaMayorCaracteresMayor4)
+
+console.log(marcas_coches.find(m=>m.length>4)) 
+
+
+
+const suma = numeros.reduce((c,a) => c+a, 0);
+console.log(suma + " suma");
+/***
+ * [1,2,3,4,5]
+ * 
+ * 
+ *  1+0 = 1
+    2+1 = 3
+    3+3 = 6
+    4+6 = 10
+    5+10 = 15
+
+ * 
+ */
+
+
+const multiplicacion = numeros.reduce((c,a) => c*a, 1);
+console.log(multiplicacion + " multiplicacion") 
