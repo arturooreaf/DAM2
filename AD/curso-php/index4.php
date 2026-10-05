@@ -8,7 +8,7 @@
 <body>
     <form action="index5.php" method="post">
     <div style =" margin-bottom: 10px; padding: 10px; background-color: red; border: 2px solid ">
-        <input type = "text" name = "miInpunt1">
+        <input type = "text" name = "miInput1">
     </div>
     <div style ="padding: 10px;  background-color: blue; ">
         <input type="submit" name="miBoton1" value="dame!"> 

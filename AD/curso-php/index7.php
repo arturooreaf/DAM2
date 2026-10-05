@@ -1,8 +1,3 @@
-<?php
-    var_export($_POST);
-?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
-    <h2>En el input llega el valor <?php echo $_POST['miInput1'] ?> </h2>
+<body style="background-color:pink;">
+    <h2 style="text-align: center;">La respuesta es: <?php echo $_POST['miInput1'] + $_POST['miInput2'] ?> </h2>
 </body>
 </html>
