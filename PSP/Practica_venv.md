@@ -4,21 +4,21 @@
 **Probado en:** Windows 11 con **Python 3.13.15**
 **Fuente oficial:** [docs.python.org/3/library/venv.html](https://docs.python.org/3/library/venv.html)
 
-> 📖 **Cómo estudiar esto:** lee primero la **⚡ frase clave** de cada pregunta. Si te la sabes explicar, pasa a la siguiente. El resto es para entenderla.
+> **Cómo estudiar esto:** lee primero la **frase clave** de cada pregunta. Si te la sabes explicar, pasa a la siguiente. El resto es para entenderla.
 
 ---
 
 ## 1. ¿Qué problema resuelve un entorno virtual?
 
-> ⚡ **Que cada proyecto tenga sus propias librerías, sin pisarse con las de otros proyectos.**
+> **Que cada proyecto tenga sus propias librerías, sin pisarse con las de otros proyectos.**
 
 **El problema, sin venv:** todas las librerías van al **mismo Python del sistema**, compartido por todos los proyectos.
 
 | Problema | Ejemplo |
 |---|---|
-| 💥 **Choque de versiones** | El proyecto A necesita `Django 4` y el B `Django 5`. Solo cabe una → uno se rompe |
-| 🧹 **Ensuciar el sistema** | Se acumulan librerías de todos los proyectos en el Python del sistema |
-| 🔁 **No se puede reproducir** | No sabes qué librerías (y qué versión) usa cada proyecto |
+| **Choque de versiones** | El proyecto A necesita `Django 4` y el B `Django 5`. Solo cabe una → uno se rompe |
+| **Ensuciar el sistema** | Se acumulan librerías de todos los proyectos en el Python del sistema |
+| **No se puede reproducir** | No sabes qué librerías (y qué versión) usa cada proyecto |
 
 **La solución, con venv:** cada proyecto tiene **su propia "caja" de librerías**. Y para que otro lo reproduzca:
 
@@ -31,7 +31,7 @@ pip install -r requirements.txt    # otra persona lo instala igual
 
 ## 2. ¿Qué crea realmente `python -m venv .venv`?
 
-> ⚡ **Una carpeta `.venv` con un Python "propio" (que reutiliza el del sistema) y su zona privada de librerías.**
+> **Una carpeta `.venv` con un Python "propio" (que reutiliza el del sistema) y su zona privada de librerías.**
 
 - `python -m venv` → ejecuta el módulo `venv`, que **ya viene con Python**.
 - `.venv` → el **nombre de la carpeta** que se crea.
@@ -64,13 +64,13 @@ version = 3.13.15
 - `home` → el **Python del sistema** que usa como base. **No se instala otro Python.**
 - `include-system-site-packages = false` → **no ve** las librerías del sistema: está aislado.
 
-📏 Recién creado ocupa **~11 MB**. Es solo una carpeta: **se puede borrar y volver a crear** sin miedo.
+Recién creado ocupa **~11 MB**. Es solo una carpeta: **se puede borrar y volver a crear** sin miedo.
 
 ---
 
 ## 3. ¿Dónde se guardan las librerías que instalamos dentro de él?
 
-> ⚡ **En `.venv\Lib\site-packages\`, dentro de la propia carpeta del entorno.**
+> **En `.venv\Lib\site-packages\`, dentro de la propia carpeta del entorno.**
 
 | Sistema | Ruta |
 |---|---|
@@ -81,13 +81,13 @@ version = 3.13.15
 - Si hago `pip install requests` → aparece `.venv\Lib\site-packages\requests\`.
 - El **Python del sistema no se entera**: sin el venv, `import requests` daría error.
 
-👀 Para verlas: `pip list`
+Para verlas: `pip list`
 
 ---
 
 ## 4. ¿Qué ocurre realmente cuando lo "activamos"?
 
-> ⚡ **Solo cambia variables de ESA terminal para que `python` y `pip` sean los del venv. No instala nada.**
+> **Solo cambia variables de ESA terminal para que `python` y `pip` sean los del venv. No instala nada.**
 
 El script `Activate.ps1` hace **3 cosas**:
 
@@ -111,13 +111,13 @@ El script `Activate.ps1` hace **3 cosas**:
 | cmd | `.venv\Scripts\activate.bat` |
 | Linux / Mac | `source .venv/bin/activate` |
 
-⚠️ Solo dura **en esa terminal**. Terminal nueva → **hay que activarlo otra vez**. Para salir: `deactivate`.
+Solo dura **en esa terminal**. Terminal nueva → **hay que activarlo otra vez**. Para salir: `deactivate`.
 
 ---
 
 ## 5. ¿Es obligatorio activarlo para utilizarlo?
 
-> ⚡ **No. Activar es solo una comodidad: puedes llamar directamente al `python` del venv.**
+> **No. Activar es solo una comodidad: puedes llamar directamente al `python` del venv.**
 
 | Sin activar | Lo mismo, activado |
 |---|---|
@@ -134,7 +134,7 @@ El script `Activate.ps1` hace **3 cosas**:
 → base: ...\Python313          ← apoyado en el Python del sistema
 ```
 
-🧠 **Lo hacen así:** VS Code y PyCharm (apuntan al `python.exe` del venv) y los servidores. Ejemplo de SGE: el servicio de Odoo arranca con `/opt/odoo/venv/bin/python ...` **sin activar nada**.
+**Lo hacen así:** VS Code y PyCharm (apuntan al `python.exe` del venv) y los servidores. Ejemplo de SGE: el servicio de Odoo arranca con `/opt/odoo/venv/bin/python ...` **sin activar nada**.
 
 > La documentación oficial lo dice: *"You don't specifically need to activate a virtual environment"*.
 
@@ -142,9 +142,9 @@ El script `Activate.ps1` hace **3 cosas**:
 
 ## 6. ¿Qué diferencia hay entre un venv y una máquina virtual como VirtualBox?
 
-> ⚡ **Un venv aísla solo las LIBRERÍAS de Python. Una máquina virtual aísla un ORDENADOR ENTERO con su propio sistema operativo.**
+> **Un venv aísla solo las LIBRERÍAS de Python. Una máquina virtual aísla un ORDENADOR ENTERO con su propio sistema operativo.**
 
-| | 🐍 venv | 🖥️ Máquina virtual (VirtualBox) |
+| | venv | Máquina virtual (VirtualBox) |
 |---|---|---|
 | **Qué aísla** | Librerías de un proyecto Python | Todo: sistema operativo, disco, red, RAM |
 | **Sistema operativo** | El mismo del PC (Windows) | El suyo propio (ej.: Ubuntu dentro de Windows) |
@@ -154,11 +154,11 @@ El script `Activate.ps1` hace **3 cosas**:
 | **Arranque** | Instantáneo | Tarda (como encender un PC) |
 | **Para qué** | Separar dependencias entre proyectos | Otro sistema, servidores, aislar todo |
 
-🔗 **Se pueden combinar:** en SGE, **dentro de la VM** de Ubuntu se creó **un venv** (`/opt/odoo/venv`) para las librerías de Odoo.
+**Se pueden combinar:** en SGE, **dentro de la VM** de Ubuntu se creó **un venv** (`/opt/odoo/venv`) para las librerías de Odoo.
 
 ---
 
-## 🧾 Chuleta de repaso
+## Chuleta de repaso
 
 ```bash
 python -m venv .venv               # crear
@@ -180,7 +180,7 @@ deactivate                         # desactivar
 
 ---
 
-## ❓ Mini-test (tápate las respuestas)
+## Mini-test (tápate las respuestas)
 
 1. Si borro la carpeta `.venv`, ¿se rompe mi Python del sistema? → **No. Solo se pierde el entorno; se vuelve a crear con `python -m venv .venv`.**
 2. ¿Activar el venv instala algo? → **No, solo cambia el `PATH`, `VIRTUAL_ENV` y el prompt de esa terminal.**
