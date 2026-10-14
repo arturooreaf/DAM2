@@ -51,6 +51,7 @@ public class Main {
 
                         if(marcaBuscar.equals(vehiculo.getMarca())){
                             System.out.println("Coche: " + vehiculo.getMarca() + " KM: " + vehiculo.getKilometro());
+                            System.out.println(vehiculo.toString());
                         } else {
                             System.out.println("No se encuentra ese coche");
                         }
