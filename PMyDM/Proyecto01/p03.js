@@ -102,3 +102,10 @@ return  acumulado > actual ? acumulado : actual
 }
 
 console.log(numeros1.reduce(miMax)); 
+
+
+
+
+
+
+
