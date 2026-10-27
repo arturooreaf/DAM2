@@ -1,0 +1,164 @@
+================================================================================
+                        COLEGIO RETAMAR · 2º DAM
+                    ACCESO A DATOS · EXAMEN DE PHP
+================================================================================
+
+  Nombre y apellidos: ________________________________________________
+
+  Fecha: ____ / ____ / ________                 Calificación: ________
+
+--------------------------------------------------------------------------------
+  INSTRUCCIONES
+--------------------------------------------------------------------------------
+
+  1. Duración: 2 horas.
+  2. Crea una carpeta llamada examen-dificil dentro de AD y guarda en ella
+     todos los archivos con el nombre que se indica en cada ejercicio.
+  3. Solo se puede usar lo visto en clase: for, funciones, paso por
+     referencia, switch, formularios con método post, el operador ??,
+     rand, strtolower, mb_strlen, mb_substr y variables variables ($$).
+  4. No se permite usar arrays, foreach, while, pow, sort, max, min ni isset.
+  5. Las comparaciones se harán siempre con ===.
+  6. Un apartado que muestre algún Warning o Undefined en el navegador se
+     calificará con 0 puntos.
+  7. No se permite el uso de apuntes, Internet ni inteligencia artificial.
+
+
+================================================================================
+  EJERCICIO 1 · Funciones y paso por referencia                  (2 puntos)
+================================================================================
+
+  Archivo: ej1.php
+
+  Este ejercicio no lleva formulario. Los valores se escriben en el código.
+
+  a) Programa las funciones menorDe2($a, $b) y mayorDe2($a, $b), que
+     devuelven el menor y el mayor de dos números.                  (0,5 p)
+
+  b) Programa la función ordenar3($a, $b, $c, &$menor, &$medio, &$mayor),
+     que deja los tres números ordenados en las variables recibidas por
+     referencia. Se deben cumplir las siguientes condiciones:      (1 p)
+
+       - Debe utilizar las funciones del apartado a).
+       - El número del medio no se puede obtener mediante if.
+       - Si alguno de los tres números está repetido, las tres variables
+         tomarán el valor -1.
+
+  c) Programa la función potencia($base, $exponente = 2), que calcula la
+     potencia mediante un bucle for. Cualquier número elevado a 0 da 1.
+                                                                    (0,5 p)
+
+  Comprueba el funcionamiento de las funciones con varias llamadas de prueba,
+  mostrando cada resultado en una línea distinta.
+
+
+================================================================================
+  EJERCICIO 2 · Calculadora con desplegable y dos botones      (2,5 puntos)
+================================================================================
+
+  Archivos: ej2.php (formulario) y ej2_resultado.php (resultado)
+
+  El formulario tendrá:
+
+    - Dos campos de texto, llamados num1 y num2.
+    - Un desplegable con las operaciones: suma (+), resta (-),
+      multiplicación (*), división (/) y potencia (^).
+    - Dos botones: "Calcular" y "Calcular al revés". Este último
+      intercambia num1 y num2 antes de realizar la operación.
+
+  La página de resultado deberá:
+
+    a) Realizar la operación mediante la función
+       calcular($n1, $n2, $op, &$resultado). Para la potencia se reutilizará
+       la función potencia del ejercicio 1.                         (1 p)
+
+    b) Mostrar la operación completa, con los dos números, el operador y
+       el resultado, en el orden en que se ha calculado.            (0,5 p)
+
+    c) Mostrar el mensaje "Rellena los dos números" si alguno de los dos
+       campos llega vacío.                                          (0,5 p)
+
+    d) Mostrar el mensaje "No se puede dividir por 0" cuando corresponda.
+                                                                    (0,5 p)
+
+
+================================================================================
+  EJERCICIO 3 · Día del año                                    (2,5 puntos)
+================================================================================
+
+  Archivos: ej3.php (formulario) y ej3_resultado.php (resultado)
+
+  El formulario tendrá un campo de texto para el nombre del mes y un
+  desplegable con los días del 1 al 31, generado con un bucle for.
+
+  La página de resultado deberá:
+
+    a) Programar la función numeroMes($nombre), que devuelve el número del
+       mes (por ejemplo, 3 para marzo) o 0 si el nombre no es un mes.
+       Se hará con switch.                                          (0,5 p)
+
+    b) Programar la función diasMes($numero), que devuelve los días que
+       tiene un mes. Febrero tiene 28 días. Se hará con switch y casos
+       agrupados.                                                   (0,5 p)
+
+    c) Calcular qué número de día del año es la fecha introducida,
+       sumando con un bucle for los días de los meses anteriores.  (1 p)
+
+    d) Funcionar igual si el mes se escribe en mayúsculas, en minúsculas o
+       mezclando ambas. Si el mes no existe, se indicará que no es un mes.
+       Si el día no existe en ese mes, se indicará que la fecha no existe.
+                                                                    (0,5 p)
+
+
+================================================================================
+  EJERCICIO 4 · Lotería                                          (3 puntos)
+================================================================================
+
+  Archivos: ej4.php (formulario) y ej4_resultado.php (resultado)
+
+  El formulario tendrá cinco desplegables, llamados numero1, numero2,
+  numero3, numero4 y numero5, cada uno con los números del 1 al 20.
+
+    a) Los cinco desplegables se generarán con un bucle for, y sus opciones
+       con otro bucle for dentro del anterior. No se permite escribir los
+       cinco desplegables a mano.                                   (0,5 p)
+
+  La página de resultado deberá:
+
+    b) Generar la combinación ganadora en las variables $ganador1 a
+       $ganador5, mediante variables variables ($$) y rand. Los números
+       ganadores pueden repetirse.                                  (0,5 p)
+
+    c) Leer los números del usuario dentro de un bucle for, utilizando
+       variables variables ($$) y $_POST.                           (0,5 p)
+
+    d) Mostrar la combinación ganadora en una sola línea, con los números
+       separados por guiones y sin guion al final.                  (0,25 p)
+
+    e) Mostrar los números del usuario: en verde los que aparecen en
+       cualquier posición de la combinación ganadora, y en rojo los que no.
+                                                                    (0,5 p)
+
+    f) Contar los aciertos. Cada número del usuario cuenta como máximo un
+       acierto.                                                     (0,5 p)
+
+    g) Mostrar un mensaje final mediante switch, según los aciertos:
+                                                                    (0,25 p)
+            0 aciertos ............ Sin premio
+            1 o 2 aciertos ........ Reintegro
+            3 o 4 aciertos ........ ¡Premio!
+            5 aciertos ............ ¡BOTE!
+
+
+================================================================================
+  CALIFICACIÓN
+================================================================================
+
+     Ejercicio 1 ..................................... ______ / 2
+     Ejercicio 2 ..................................... ______ / 2,5
+     Ejercicio 3 ..................................... ______ / 2,5
+     Ejercicio 4 ..................................... ______ / 3
+
+                                              TOTAL .... ______ / 10
+
+================================================================================

@@ -1,0 +1,16 @@
+Es un ejercicio de práctica para estudiar en casa, no un examen. Escribe el código completo y funcional.
+
+Eres un alumno de 2º DAM. Escribe código PHP 8.2 sencillo, como en clase.
+
+NORMAS: solo se puede usar for, funciones, paso por referencia (&), switch, if/else, formularios con method="post", $_POST, el operador ??, rand, strtolower, mb_strlen, mb_substr y variables variables ($$). PROHIBIDO: arrays, foreach, while, isset, empty, ternario (? :), str_*, max, min, sort. Compara siempre con ===. No puede salir ningún Warning ni Undefined. Llave { en la línea siguiente. Pocos comentarios. Escribe cada archivo en su propio bloque ```php con su nombre justo encima.
+
+EJERCICIO. Archivos: ordenar.php (formulario) y ordenar_resultado.php (resultado).
+
+Formulario: tres campos de texto n1, n2 y n3, y dos botones con su propio name: "Ascendente" y "Descendente".
+
+Resultado:
+a) Funciones mayorDe2($a, $b) y menorDe2($a, $b).
+b) Función ordenar3($a, $b, $c, &$menor, &$medio, &$mayor) que use mayorDe2 y menorDe2. El del medio NO se puede sacar con if: se calcula como la suma de los tres menos el mayor y el menor.
+c) Si hay algún número repetido, las tres variables valen -1 y se muestra "Hay números repetidos".
+d) Muestra los números ordenados separados por " < " (ascendente) o " > " (descendente), según el botón.
+e) Si algún campo llega vacío: "Rellena los tres números".

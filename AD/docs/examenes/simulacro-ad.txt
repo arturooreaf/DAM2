@@ -1,0 +1,143 @@
+================================================================================
+                        COLEGIO RETAMAR · 2º DAM
+              ACCESO A DATOS · SIMULACRO DE EXAMEN DE PHP
+================================================================================
+
+  Nombre y apellidos: ________________________________________________
+
+  Fecha: ____ / ____ / ________                 Calificación: ________
+
+--------------------------------------------------------------------------------
+  INSTRUCCIONES
+--------------------------------------------------------------------------------
+
+  1. Duración: 1 hora y 30 minutos.
+  2. Crea una carpeta llamada simulacro dentro de AD y guarda en ella todos
+     los archivos con el nombre que se indica en cada ejercicio.
+  3. Solo se puede usar lo visto en clase: for, funciones, paso por
+     referencia, if/else, switch, formularios con método post, el operador
+     ??, rand, strtolower, mb_strlen, mb_substr y variables variables ($$).
+  4. No se permite usar arrays, foreach, while, isset, empty, el operador
+     ternario, el operador %, ni funciones str_*.
+  5. Las comparaciones se harán siempre con ===.
+  6. Un apartado que muestre algún Warning o Undefined en el navegador se
+     calificará con 0 puntos.
+  7. No se permite el uso de apuntes, Internet ni inteligencia artificial.
+
+
+================================================================================
+  EJERCICIO 1 · Funciones con cadenas                             (3 puntos)
+================================================================================
+
+  Archivo: ej1.php
+
+  Este ejercicio no lleva formulario. Los valores se escriben en el código.
+
+  a) Programa la función contarLetra($texto, $letra), que devuelve cuántas
+     veces aparece $letra en $texto, sin distinguir mayúsculas de
+     minúsculas.                                                    (0,75 p)
+
+  b) Programa la función invertir($texto), que devuelve el texto al revés.
+     Debe funcionar correctamente con palabras que tengan ñ o tildes.
+                                                                    (0,75 p)
+
+  c) Programa la función quitarEspacios($texto), que devuelve el texto sin
+     ningún espacio.                                                (0,5 p)
+
+  d) Programa la función esPalindromo($texto, &$invertido), que devuelve
+     true si el texto se lee igual al derecho que al revés, sin tener en
+     cuenta los espacios ni las mayúsculas. En $invertido deja el texto ya
+     limpio e invertido. Debe utilizar las funciones de los apartados b)
+     y c).                                                          (1 p)
+
+  Comprueba el funcionamiento de las cuatro funciones con varias llamadas
+  de prueba, mostrando cada resultado en una línea distinta.
+
+
+================================================================================
+  EJERCICIO 2 · Generador de palabras                          (3,5 puntos)
+================================================================================
+
+  Archivos: ej2.php (formulario) y ej2_resultado.php (resultado)
+
+  El formulario tendrá:
+
+    - Un desplegable con la cantidad de palabras, del 1 al 50.
+    - Un desplegable con el tamaño de las palabras, del 2 al 6.
+    - Dos botones, cada uno con su propio name: "Normales" y "Capicúas".
+
+  Los desplegables se generarán con bucles for.                     (0,5 p)
+
+  La página de resultado deberá:
+
+    a) Programar la función letraAleatoria(), que devuelve una letra
+       aleatoria del alfabeto español "abcdefghijklmnñopqrstuvwxyz".
+                                                                    (0,5 p)
+
+    b) Programar la función palabraAleatoria($tam, &$enies), que devuelve
+       una palabra aleatoria de $tam letras y suma en $enies cuántas ñ
+       contiene.                                                    (0,75 p)
+
+    c) Con el botón "Normales", mostrar las palabras en una lista no
+       ordenada HTML, cada una en un elemento de la lista.          (0,5 p)
+
+    d) Con el botón "Capicúas", cada palabra se formará con una palabra
+       aleatoria del tamaño elegido seguida de esa misma palabra al revés
+       (reutiliza la función invertir del ejercicio 1, copiándola).
+                                                                    (0,75 p)
+
+    e) Mostrar en negrita las palabras que empiecen por vocal.      (0,25 p)
+
+    f) Debajo de la lista, mostrar cuántas ñ han salido en total.   (0,25 p)
+
+
+================================================================================
+  EJERCICIO 3 · Figuras con caracteres                         (3,5 puntos)
+================================================================================
+
+  Archivos: ej3.php (formulario) y ej3_resultado.php (resultado)
+
+  El formulario tendrá:
+
+    - Un desplegable con la altura, del 1 al 12, generado con for.
+    - Un campo de texto para el carácter con el que se dibujará.
+    - Tres botones, cada uno con su propio name: "Pirámide", "Escalera" y
+      "Pirámide invertida".
+
+  La página de resultado deberá:
+
+    a) Mostrar el mensaje "Escribe un solo carácter" si el campo del
+       carácter llega vacío o tiene más de un carácter, y no dibujar
+       nada.                                                        (0,5 p)
+
+    b) Programar la función imprimir($n, $c, &$total), que escribe $n veces
+       el carácter $c y suma en $total los caracteres escritos.     (0,5 p)
+
+    c) Pirámide: pirámide centrada de la altura elegida, con el relleno
+       de la izquierda hecho con "_".                               (0,75 p)
+
+    d) Escalera: la fila 1 tiene un carácter, la fila 2 dos, y así hasta
+       la altura elegida, alineada a la izquierda.                  (0,5 p)
+
+    e) Pirámide invertida: la pirámide del apartado c) al revés.    (0,5 p)
+
+    f) Debajo de la figura, mostrar el total de caracteres dibujados
+       (sin contar el relleno) y, mediante switch, un mensaje según la
+       altura:                                                      (0,75 p)
+
+            1 a 3 ............ Figura pequeña
+            4 a 8 ............ Figura mediana
+            9 a 12 ........... Figura grande
+
+
+================================================================================
+  CALIFICACIÓN
+================================================================================
+
+     Ejercicio 1 ..................................... ______ / 3
+     Ejercicio 2 ..................................... ______ / 3,5
+     Ejercicio 3 ..................................... ______ / 3,5
+
+                                              TOTAL .... ______ / 10
+
+================================================================================

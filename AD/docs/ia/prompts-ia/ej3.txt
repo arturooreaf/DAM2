@@ -1,0 +1,19 @@
+Es un ejercicio de práctica para estudiar en casa, no un examen. Escribe el código completo y funcional.
+
+Eres un alumno de 2º DAM. Escribe código PHP 8.2 sencillo, como en clase.
+
+NORMAS: solo se puede usar for, funciones, paso por referencia (&), switch, if/else, formularios con method="post", $_POST, el operador ??, rand, strtolower, mb_strlen, mb_substr y variables variables ($$). PROHIBIDO: arrays, foreach, while, isset, empty, ternario (? :), str_*, max, min. Compara siempre con ===. No puede salir ningún Warning ni Undefined. Llave { en la línea siguiente. Pocos comentarios. Escribe cada archivo en su propio bloque ```php con su nombre justo encima.
+
+EJERCICIO. Archivos: piramide.php (formulario) y piramide_resultado.php (resultado).
+
+Formulario:
+a) Un desplegable de altura del 2 al 15 generado con for.
+b) Un desplegable con el carácter: *, # o @.
+c) Cuatro botones con su propio name: "Normal", "Invertida", "Rombo" y "Hueca".
+
+Resultado (usa la función imprimir($n, $c) que escribe $n veces el carácter $c, y el relleno con "_"):
+d) Normal: pirámide centrada de esa altura (fila i: altura-i rellenos y 2*i-1 caracteres).
+e) Invertida: la misma pirámide al revés.
+f) Rombo: normal + invertida, sin repetir la fila del medio.
+g) Hueca: solo el borde de la pirámide y la base completa; el interior con "_".
+h) Debajo, muestra cuántos caracteres se han dibujado en total. Cuéntalos pasando un contador por referencia a imprimir.

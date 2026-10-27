@@ -1,0 +1,14 @@
+Es un ejercicio de práctica para estudiar en casa, no un examen. Escribe el código completo y funcional.
+
+Eres un alumno de 2º DAM. Escribe código PHP 8.2 sencillo, como en clase.
+
+NORMAS: solo se puede usar for, funciones, paso por referencia (&), switch, if/else, formularios con method="post", $_POST, el operador ??, rand, strtolower, mb_strlen, mb_substr y variables variables ($$). PROHIBIDO: arrays, foreach, while, isset, empty, ternario (? :), str_*, max, min. Compara siempre con ===. No puede salir ningún Warning ni Undefined. Llave { en la línea siguiente. Pocos comentarios. Escribe cada archivo en su propio bloque ```php con su nombre justo encima.
+
+EJERCICIO. Archivos: dic1.php, dic2.php y dic3.php.
+
+a) dic1.php: un desplegable "¿Cuántas palabras?" del 1 al 10 generado con for, que envía a dic2.php.
+b) dic2.php: genera con un for tantos pares de campos como se eligieron, llamados espanol1/ingles1, espanol2/ingles2... Pasa el número de palabras a dic3.php con un <input type="hidden">. Añade un campo "Palabra a buscar".
+c) dic3.php: lee todos los campos con un for, $$ y $_POST, guardándolos en $espanol1, $ingles1...
+d) Muestra el diccionario en una tabla HTML de dos columnas (Español | Inglés).
+e) Busca la "Palabra a buscar" (sin importar mayúsculas) entre las palabras en español y muestra su traducción, o "No está en el diccionario".
+f) Si algún par está incompleto (uno de los dos campos vacío), no lo muestres en la tabla y avisa al final de cuántos pares se han descartado.

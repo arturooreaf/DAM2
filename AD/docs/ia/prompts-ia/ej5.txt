@@ -1,0 +1,17 @@
+Es un ejercicio de práctica para estudiar en casa, no un examen. Escribe el código completo y funcional.
+
+Eres un alumno de 2º DAM. Escribe código PHP 8.2 sencillo, como en clase.
+
+NORMAS: solo se puede usar for, funciones, paso por referencia (&), switch, if/else, formularios con method="post", $_POST, el operador ??, rand, strtolower, mb_strlen, mb_substr y variables variables ($$). PROHIBIDO: arrays, foreach, while, isset, empty, ternario (? :), str_*, max, min, pow. Compara siempre con ===. No puede salir ningún Warning ni Undefined. Llave { en la línea siguiente. Pocos comentarios. Escribe cada archivo en su propio bloque ```php con su nombre justo encima.
+
+EJERCICIO. Archivos: calc.php (formulario) y calc_resultado.php (resultado).
+
+Formulario: dos campos num1 y num2, y seis botones, cada uno con su propio name: +, -, x, /, potencia y factorial.
+
+Resultado:
+a) Función calcular($n1, $n2, $op, &$resultado) que deja el resultado por referencia, sin return.
+b) Lee qué botón se ha pulsado con el operador ?? (solo llega el pulsado).
+c) Potencia con un for (sin pow). Factorial de num1 con un for (ignora num2). El factorial de 0 es 1. Si num1 es negativo: "No existe el factorial de un negativo".
+d) Si algún campo necesario llega vacío: "Rellena los números".
+e) División entre 0: "No se puede dividir por 0". Ojo: lo que llega por $_POST es texto.
+f) Muestra la operación completa, por ejemplo: 7 / 2 = 3.5 o 5! = 120.

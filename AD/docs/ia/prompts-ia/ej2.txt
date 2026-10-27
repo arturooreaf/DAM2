@@ -1,0 +1,17 @@
+Es un ejercicio de práctica para estudiar en casa, no un examen. Escribe el código completo y funcional.
+
+Eres un alumno de 2º DAM. Escribe código PHP 8.2 sencillo, como en clase.
+
+NORMAS: solo se puede usar for, funciones, paso por referencia (&), switch, if/else, formularios con method="post", $_POST, el operador ??, rand, strtolower, mb_strlen, mb_substr y variables variables ($$). PROHIBIDO: arrays, foreach, while, isset, empty, ternario (? :), str_*, max, min. Compara siempre con ===. No puede salir ningún Warning ni Undefined. Llave { en la línea siguiente. Pocos comentarios. Escribe cada archivo en su propio bloque ```php con su nombre justo encima.
+
+EJERCICIO. Archivos: horoscopo.php (formulario) y horoscopo_resultado.php (resultado).
+
+Formulario: un campo de texto para el nombre del mes y un desplegable con los días del 1 al 31 generado con for. Un botón "DAME".
+
+Resultado:
+a) Función numeroMes($nombre) con switch: devuelve 1-12, o 0 si no es un mes. Tiene que funcionar con "MARZO", "Marzo" o "marzo".
+b) Función diasMes($numero) con switch y casos agrupados (febrero 28).
+c) Si el mes no existe: "X no es un mes". Si el día no existe en ese mes: "El día X de Y no existe".
+d) Función estacion($dia, $mes) que devuelva la estación con las fechas reales: primavera del 21 de marzo al 20 de junio, verano del 21 de junio al 22 de septiembre, otoño del 23 de septiembre al 20 de diciembre, invierno del 21 de diciembre al 20 de marzo.
+e) Función horoscopo($dia, $mes) con switch por mes y un if por el día de corte: Capricornio 22 dic-19 ene, Acuario 20 ene-18 feb, Piscis 19 feb-20 mar, Aries 21 mar-19 abr, Tauro 20 abr-20 may, Géminis 21 may-20 jun, Cáncer 21 jun-22 jul, Leo 23 jul-22 ago, Virgo 23 ago-22 sep, Libra 23 sep-22 oct, Escorpio 23 oct-21 nov, Sagitario 22 nov-21 dic.
+f) Muestra: "El X de Y es Z y tu horóscopo es W".

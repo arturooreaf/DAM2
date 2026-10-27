@@ -1,0 +1,147 @@
+EJERCICIOS PROBABLES DEL EXAMEN DE AD · PARA PEGAR EN LA IA
+=================================================================
+
+CÓMO USARLO (FÁCIL, SIN COPIAR NADA)
+En PowerShell, escribe esto cambiando el 1 por el número del ejercicio:
+   C:\dev\DAM2\AD\docs\ia\prompts-ia\preguntar.bat 1
+
+CÓMO USARLO (A MANO)
+1. Abre la IA:   ollama run quetevotetxapote
+2. Copia UN SOLO bloque, desde el """ de arriba hasta el """ de abajo
+   (las comillas incluidas) y pégalo. NUNCA pegues el archivo entero.
+3. Espera la respuesta. Antes de pegar el siguiente, escribe /clear.
+
+Cada bloque lleva las normas dentro, así que funcionan sueltos.
+
+
+=================================================================
+EJERCICIO 1 · PALABRAS ALEATORIAS EN LISTA
+=================================================================
+"""
+Eres un alumno de 2º DAM. Escribe código PHP 8.2 sencillo, como en clase.
+
+NORMAS: solo se puede usar for, funciones, paso por referencia (&), switch, if/else, formularios con method="post", $_POST, el operador ??, rand, strtolower, mb_strlen, mb_substr y variables variables ($$). PROHIBIDO: arrays, foreach, while, isset, empty, ternario (? :), str_*, max, min. Compara siempre con ===. No puede salir ningún Warning ni Undefined. Llave { en la línea siguiente. Pocos comentarios. Escribe cada archivo en su propio bloque ```php con su nombre justo encima.
+
+EJERCICIO. Archivos: palabras.php (formulario) y palabras_resultado.php (resultado).
+
+Formulario:
+a) Un desplegable "Número de palabras" del 1 al 100, generado con for.
+b) Dos desplegables "Tamaño mínimo" y "Tamaño máximo", del 3 al 8, generados con for.
+c) Dos botones con su propio name: "Normales" y "Pronunciables".
+
+Resultado:
+d) Si el mínimo es mayor que el máximo, muestra "El mínimo no puede ser mayor que el máximo" y no hagas nada más.
+e) Genera las palabras en una lista no ordenada <ul> con un <li> por palabra. Cada palabra tiene un tamaño aleatorio entre el mínimo y el máximo.
+f) Con "Normales", las letras son aleatorias del alfabeto español "abcdefghijklmnñopqrstuvwxyz". Con "Pronunciables", la palabra alterna consonante y vocal empezando por consonante (por ejemplo "bako"). Usa una función letraAleatoria($letras) que reciba la cadena de letras de la que elegir.
+g) Las palabras que empiezan por vocal salen en negrita.
+h) Cada palabra sale de un color según su tamaño, con switch: 3-4 verde, 5-6 azul, 7-8 rojo.
+i) Debajo de la lista, muestra cuántas letras "a" han salido en total. Cuéntalas con una función generarPalabra($tam, $tipo, &$contadorA) que devuelva la palabra y sume las "a" en $contadorA.
+"""
+
+
+=================================================================
+EJERCICIO 2 · ESTACIÓN Y HORÓSCOPO POR FECHA EXACTA
+=================================================================
+"""
+Eres un alumno de 2º DAM. Escribe código PHP 8.2 sencillo, como en clase.
+
+NORMAS: solo se puede usar for, funciones, paso por referencia (&), switch, if/else, formularios con method="post", $_POST, el operador ??, rand, strtolower, mb_strlen, mb_substr y variables variables ($$). PROHIBIDO: arrays, foreach, while, isset, empty, ternario (? :), str_*, max, min. Compara siempre con ===. No puede salir ningún Warning ni Undefined. Llave { en la línea siguiente. Pocos comentarios. Escribe cada archivo en su propio bloque ```php con su nombre justo encima.
+
+EJERCICIO. Archivos: horoscopo.php (formulario) y horoscopo_resultado.php (resultado).
+
+Formulario: un campo de texto para el nombre del mes y un desplegable con los días del 1 al 31 generado con for. Un botón "DAME".
+
+Resultado:
+a) Función numeroMes($nombre) con switch: devuelve 1-12, o 0 si no es un mes. Tiene que funcionar con "MARZO", "Marzo" o "marzo".
+b) Función diasMes($numero) con switch y casos agrupados (febrero 28).
+c) Si el mes no existe: "X no es un mes". Si el día no existe en ese mes: "El día X de Y no existe".
+d) Función estacion($dia, $mes) que devuelva la estación con las fechas reales: primavera del 21 de marzo al 20 de junio, verano del 21 de junio al 22 de septiembre, otoño del 23 de septiembre al 20 de diciembre, invierno del 21 de diciembre al 20 de marzo.
+e) Función horoscopo($dia, $mes) con switch por mes y un if por el día de corte: Capricornio 22 dic-19 ene, Acuario 20 ene-18 feb, Piscis 19 feb-20 mar, Aries 21 mar-19 abr, Tauro 20 abr-20 may, Géminis 21 may-20 jun, Cáncer 21 jun-22 jul, Leo 23 jul-22 ago, Virgo 23 ago-22 sep, Libra 23 sep-22 oct, Escorpio 23 oct-21 nov, Sagitario 22 nov-21 dic.
+f) Muestra: "El X de Y es Z y tu horóscopo es W".
+"""
+
+
+=================================================================
+EJERCICIO 3 · PIRÁMIDES
+=================================================================
+"""
+Eres un alumno de 2º DAM. Escribe código PHP 8.2 sencillo, como en clase.
+
+NORMAS: solo se puede usar for, funciones, paso por referencia (&), switch, if/else, formularios con method="post", $_POST, el operador ??, rand, strtolower, mb_strlen, mb_substr y variables variables ($$). PROHIBIDO: arrays, foreach, while, isset, empty, ternario (? :), str_*, max, min. Compara siempre con ===. No puede salir ningún Warning ni Undefined. Llave { en la línea siguiente. Pocos comentarios. Escribe cada archivo en su propio bloque ```php con su nombre justo encima.
+
+EJERCICIO. Archivos: piramide.php (formulario) y piramide_resultado.php (resultado).
+
+Formulario:
+a) Un desplegable de altura del 2 al 15 generado con for.
+b) Un desplegable con el carácter: *, # o @.
+c) Cuatro botones con su propio name: "Normal", "Invertida", "Rombo" y "Hueca".
+
+Resultado (usa la función imprimir($n, $c) que escribe $n veces el carácter $c, y el relleno con "_"):
+d) Normal: pirámide centrada de esa altura (fila i: altura-i rellenos y 2*i-1 caracteres).
+e) Invertida: la misma pirámide al revés.
+f) Rombo: normal + invertida, sin repetir la fila del medio.
+g) Hueca: solo el borde de la pirámide y la base completa; el interior con "_".
+h) Debajo, muestra cuántos caracteres se han dibujado en total. Cuéntalos pasando un contador por referencia a imprimir.
+"""
+
+
+=================================================================
+EJERCICIO 4 · DICCIONARIO CON $$ EN 3 PÁGINAS
+=================================================================
+"""
+Eres un alumno de 2º DAM. Escribe código PHP 8.2 sencillo, como en clase.
+
+NORMAS: solo se puede usar for, funciones, paso por referencia (&), switch, if/else, formularios con method="post", $_POST, el operador ??, rand, strtolower, mb_strlen, mb_substr y variables variables ($$). PROHIBIDO: arrays, foreach, while, isset, empty, ternario (? :), str_*, max, min. Compara siempre con ===. No puede salir ningún Warning ni Undefined. Llave { en la línea siguiente. Pocos comentarios. Escribe cada archivo en su propio bloque ```php con su nombre justo encima.
+
+EJERCICIO. Archivos: dic1.php, dic2.php y dic3.php.
+
+a) dic1.php: un desplegable "¿Cuántas palabras?" del 1 al 10 generado con for, que envía a dic2.php.
+b) dic2.php: genera con un for tantos pares de campos como se eligieron, llamados espanol1/ingles1, espanol2/ingles2... Pasa el número de palabras a dic3.php con un <input type="hidden">. Añade un campo "Palabra a buscar".
+c) dic3.php: lee todos los campos con un for, $$ y $_POST, guardándolos en $espanol1, $ingles1...
+d) Muestra el diccionario en una tabla HTML de dos columnas (Español | Inglés).
+e) Busca la "Palabra a buscar" (sin importar mayúsculas) entre las palabras en español y muestra su traducción, o "No está en el diccionario".
+f) Si algún par está incompleto (uno de los dos campos vacío), no lo muestres en la tabla y avisa al final de cuántos pares se han descartado.
+"""
+
+
+=================================================================
+EJERCICIO 5 · CALCULADORA CON REFERENCIA Y BOTONES
+=================================================================
+"""
+Eres un alumno de 2º DAM. Escribe código PHP 8.2 sencillo, como en clase.
+
+NORMAS: solo se puede usar for, funciones, paso por referencia (&), switch, if/else, formularios con method="post", $_POST, el operador ??, rand, strtolower, mb_strlen, mb_substr y variables variables ($$). PROHIBIDO: arrays, foreach, while, isset, empty, ternario (? :), str_*, max, min, pow. Compara siempre con ===. No puede salir ningún Warning ni Undefined. Llave { en la línea siguiente. Pocos comentarios. Escribe cada archivo en su propio bloque ```php con su nombre justo encima.
+
+EJERCICIO. Archivos: calc.php (formulario) y calc_resultado.php (resultado).
+
+Formulario: dos campos num1 y num2, y seis botones, cada uno con su propio name: +, -, x, /, potencia y factorial.
+
+Resultado:
+a) Función calcular($n1, $n2, $op, &$resultado) que deja el resultado por referencia, sin return.
+b) Lee qué botón se ha pulsado con el operador ?? (solo llega el pulsado).
+c) Potencia con un for (sin pow). Factorial de num1 con un for (ignora num2). El factorial de 0 es 1. Si num1 es negativo: "No existe el factorial de un negativo".
+d) Si algún campo necesario llega vacío: "Rellena los números".
+e) División entre 0: "No se puede dividir por 0". Ojo: lo que llega por $_POST es texto.
+f) Muestra la operación completa, por ejemplo: 7 / 2 = 3.5 o 5! = 120.
+"""
+
+
+=================================================================
+EJERCICIO 6 · ORDENAR TRES NÚMEROS
+=================================================================
+"""
+Eres un alumno de 2º DAM. Escribe código PHP 8.2 sencillo, como en clase.
+
+NORMAS: solo se puede usar for, funciones, paso por referencia (&), switch, if/else, formularios con method="post", $_POST, el operador ??, rand, strtolower, mb_strlen, mb_substr y variables variables ($$). PROHIBIDO: arrays, foreach, while, isset, empty, ternario (? :), str_*, max, min, sort. Compara siempre con ===. No puede salir ningún Warning ni Undefined. Llave { en la línea siguiente. Pocos comentarios. Escribe cada archivo en su propio bloque ```php con su nombre justo encima.
+
+EJERCICIO. Archivos: ordenar.php (formulario) y ordenar_resultado.php (resultado).
+
+Formulario: tres campos de texto n1, n2 y n3, y dos botones con su propio name: "Ascendente" y "Descendente".
+
+Resultado:
+a) Funciones mayorDe2($a, $b) y menorDe2($a, $b).
+b) Función ordenar3($a, $b, $c, &$menor, &$medio, &$mayor) que use mayorDe2 y menorDe2. El del medio NO se puede sacar con if: se calcula como la suma de los tres menos el mayor y el menor.
+c) Si hay algún número repetido, las tres variables valen -1 y se muestra "Hay números repetidos".
+d) Muestra los números ordenados separados por " < " (ascendente) o " > " (descendente), según el botón.
+e) Si algún campo llega vacío: "Rellena los tres números".
+"""

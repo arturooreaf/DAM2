@@ -1,0 +1,20 @@
+Es un ejercicio de práctica para estudiar en casa, no un examen. Escribe el código completo y funcional.
+
+Eres un alumno de 2º DAM. Escribe código PHP 8.2 sencillo, como en clase.
+
+NORMAS: solo se puede usar for, funciones, paso por referencia (&), switch, if/else, formularios con method="post", $_POST, el operador ??, rand, strtolower, mb_strlen, mb_substr y variables variables ($$). PROHIBIDO: arrays, foreach, while, isset, empty, ternario (? :), str_*, max, min. Compara siempre con ===. No puede salir ningún Warning ni Undefined. Llave { en la línea siguiente. Pocos comentarios. Escribe cada archivo en su propio bloque ```php con su nombre justo encima.
+
+EJERCICIO. Archivos: palabras.php (formulario) y palabras_resultado.php (resultado).
+
+Formulario:
+a) Un desplegable "Número de palabras" del 1 al 100, generado con for.
+b) Dos desplegables "Tamaño mínimo" y "Tamaño máximo", del 3 al 8, generados con for.
+c) Dos botones con su propio name: "Normales" y "Pronunciables".
+
+Resultado:
+d) Si el mínimo es mayor que el máximo, muestra "El mínimo no puede ser mayor que el máximo" y no hagas nada más.
+e) Genera las palabras en una lista no ordenada <ul> con un <li> por palabra. Cada palabra tiene un tamaño aleatorio entre el mínimo y el máximo.
+f) Con "Normales", las letras son aleatorias del alfabeto español "abcdefghijklmnñopqrstuvwxyz". Con "Pronunciables", la palabra alterna consonante y vocal empezando por consonante (por ejemplo "bako"). Usa una función letraAleatoria($letras) que reciba la cadena de letras de la que elegir.
+g) Las palabras que empiezan por vocal salen en negrita.
+h) Cada palabra sale de un color según su tamaño, con switch: 3-4 verde, 5-6 azul, 7-8 rojo.
+i) Debajo de la lista, muestra cuántas letras "a" han salido en total. Cuéntalas con una función generarPalabra($tam, $tipo, &$contadorA) que devuelva la palabra y sume las "a" en $contadorA.
