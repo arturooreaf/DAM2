@@ -1,0 +1,6 @@
+Hay que hacer unas tragaperass, con 5 imagenes, cuadrado, triangulo, estrella, 
+circulo y rombo, hay cuatro capsulas dentro, y abajo a la ziquierda hay una opcion que es un botond e juagar
+en cada capsula del medio,  aparece de manera ramdon un icono
+todos iguales 100 puntos
+1 pareja 20  
+Empezamos con un pot de 1000 de inicio, y cada vez que das cada jugada son 15 
