@@ -5,3 +5,9 @@ SASP/
 .venv/
 CLAUDE.md
 Digitalizacion/
+
+# Archivos personales de IA y comprimidos (no se publican)
+contexto-ia-dam.txt
+GUIA-IA-LOCAL.md
+Modelfile-*
+*.zip
