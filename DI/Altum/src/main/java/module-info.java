@@ -4,6 +4,7 @@ module com.arturo.altum {
 
     requires org.controlsfx.controls;
     requires com.dlsc.formsfx;
+    requires atlantafx.base;
 
     opens com.arturo.altum to javafx.fxml;
     exports com.arturo.altum;
