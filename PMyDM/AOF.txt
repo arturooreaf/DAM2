@@ -1,0 +1,36 @@
+//Ejercicio 1
+const ventas = [
+    {libro: "Dune", categoria: "Ciencia Ficcion"},
+    {libro: "1984", categoria: "Ciencia Ficcion"},
+    {libro: "Sapiens", categoria: "Ensayo"},
+    {libro: "HomoDeus", categoria: "Ensayo"},
+    {libro: "El Hobbit", categoria: "Fantasia"},
+
+];
+function contarPorCategoria(){
+    const ventasLibro = ventas.reduce((acc, a) => acc + a.libro, 0)
+     const ventasCategoria = ventas.reduce((acc, a) => acc + a.categoria, 0)
+     console.log(ventasLibro)
+     console.log(ventasCategoria)
+}
+contarPorCategoria(ventas)
+
+//Ejercicio 2
+const notas = [
+    [7,8,6],
+    [5,4,6],
+    [9,10,8],
+];
+
+for (let i = 0; i < notas.length; i++) {
+    const element = notas[0] + notas[1] + notas[3] ;
+    console.log(element[0])
+}
+
+//ej 3
+
+const numeros = [4,9,1,8,3]
+for (let index = 0; index > numeros.length; index--) {
+    const element = numeros[numeros.length-1];
+    console.log(element)
+}
